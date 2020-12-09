@@ -9,3 +9,14 @@ apt-get update
 apt-get -y install docker-ce docker-ce-cli containerd.io
 usermod -aG docker vagrant
 systemctl enable docker
+mkdir -p /srv/gitlab/{data,logs,config}
+docker run --detach \
+--hostname gitlab \
+--publish 443:443 --publish 80:80 \
+--name gitlab \
+--restart always \
+--env EXTERNAL_URL=https://gitlab \
+--volume /srv/gitlab/config:/etc/gitlab \
+--volume /srv/gitlab/logs:/var/log/gitlab \
+--volume /srv/gitlab/data:/var/opt/gitlab \
+gitlab/gitlab-ce:latest
