@@ -5,7 +5,6 @@ Vagrant.configure("2") do |config|
     gitlab.vm.network "forwarded_port", guest: 80, host: 80, auto_correct: true
     gitlab.vm.network "private_network", ip: "192.168.1.11"
     gitlab.vm.provision "shell", path: "scripts/bootstrap.sh"
-    gitlab.vm.synced_folder "./gitlab-data", "/srv/gitlab"
     gitlab.vm.provider "virtualbox" do |vbox|
       vbox.name = "Gitlab"
       vbox.cpus = "2"
