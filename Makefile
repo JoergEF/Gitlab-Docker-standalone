@@ -1,4 +1,7 @@
 new:
+	ifeq ($(OS),Windows_NT)
+		chcp 1252
+	endif
 	vagrant up
 	vagrant reload
 
@@ -8,4 +11,8 @@ fresh: clean
 
 clean:
 	vagrant destroy -f
-	rm -rf .vagrant
+	ifeq ($(OS),Windows_NT)
+		powershell "Remove-Item -Recurse .\.vagrant"
+	else
+		rm -rf .vagrant
+	endif
