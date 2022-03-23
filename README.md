@@ -1,4 +1,4 @@
-# Vagrant
+# GitLab Docker (standalone)
 Ein Demoprojekt innerhalb dessen mittels
 
   1. Vagrant
