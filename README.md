@@ -11,8 +11,29 @@ eine fertige Umgebung als IaC zur Verfügung gestellt wird.
 
 ## Benutzung
 
+### Voraussetzungen (Windows)
+
+  1. chocolatey installieren (https://chocolatey.org/install#individual)
+  2. choco install make
+  3. choco install vagrant
+
+### Voraussetzungen (Ubuntu/Debian)
+
+  1. apt update
+  2. apt install build-essential vagrant
+
 ```bash
 git clone https://github.com/JoergEF/Gitlab_docker_standalone.git
 cd Gitlab_docker_standalone
 make
 ```
+
+#### initiales root-Passwort anzeigen
+
+```bash
+vagrant ssh
+sudo docker exec -it gitlab grep 'Password:' /etc/gitlab/initial_root_password
+```
+
+#### Weboberfläche: (dauert ca. 25 Minuten)
+  http://127.0.0.1/
