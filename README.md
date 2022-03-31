@@ -32,7 +32,7 @@ make
 
 ```bash
 vagrant ssh
-sudo docker exec -it gitlab grep 'Password:' /etc/gitlab/initial_root_password
+sudo docker exec -it vagrant_gitlab_1 grep 'Password:' /etc/gitlab/initial_root_password
 ```
 
 #### Weboberfläche: (dauert ca. 25 Minuten)

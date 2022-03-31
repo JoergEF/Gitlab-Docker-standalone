@@ -1,4 +1,6 @@
 #!/bin/bash
+# apt im Noninteractive-Modus
+export DEBIAN_FRONTEND=noninteractive
 # allgemeine Updates
 apt-get update
 apt-get -y upgrade
