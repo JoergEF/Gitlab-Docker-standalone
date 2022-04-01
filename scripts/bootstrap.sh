@@ -13,3 +13,5 @@ apt-get -y install docker-ce docker-ce-cli containerd.io docker-compose
 usermod -aG docker vagrant
 systemctl enable docker
 mkdir -p /srv/gitlab/{config,logs,data}
+cp /vagrant/config/certs/* /srv/gitlab/config
+
