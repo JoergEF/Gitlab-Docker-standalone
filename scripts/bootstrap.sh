@@ -13,6 +13,7 @@ rm /etc/resolv.conf
 echo "nameserver 10.50.100.10" > /etc/resolv.conf
 echo "nameserver 10.50.100.11" >> /etc/resolv.conf
 echo "search kurs.iad" >> /etc/resolv.conf
+echo "192.168.1.11 gitlab.kurs.iad gitlab" >> /etc/hosts
 apt-get -y install dnsmasq
 
 # Installation der aktuellen Docker-CE
