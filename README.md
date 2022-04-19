@@ -38,6 +38,8 @@ sudo grep 'Password:' /srv/gitlab/config/initial_root_password
 #### Weboberfläche: (dauert ca. 25 Minuten)
   eigene hosts-Datei anpassen:
   
-    ++ 192.168.1.11 gitlab.kurs.iad gitlab
+  ```bash
+  echo "192.168.1.11 gitlab.kurs.iad gitlab" | sudo tee -a /etc/hosts
+  ```
   
   https://gitlab/
