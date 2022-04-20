@@ -1,5 +1,8 @@
 # GitLab Docker (standalone)
 
+## Anleitung für Gesamtprojekt
+https://gist.github.com/JoergEF/4ac451826bcde1b176e97604a43edd51
+
 Ein Demoprojekt innerhalb dessen mittels
 
   1. Vagrant
