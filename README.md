@@ -26,8 +26,8 @@ eine fertige Umgebung als IaC zur Verfügung gestellt wird.
   2. apt install build-essential vagrant
 
 ```bash
-git clone https://github.com/JoergEF/Gitlab_docker_standalone.git
-cd Gitlab_docker_standalone
+git clone https://github.com/JoergEF/Gitlab-Docker-standalone.git
+cd Gitlab-Docker-standalone
 make
 ```
 
